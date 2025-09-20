@@ -1,2 +1,3 @@
 # chocolate-project
-Styding project
+
+Study project
