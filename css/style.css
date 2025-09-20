@@ -3,14 +3,138 @@
   padding: 0;
   text-decoration: none;
   list-style-type: none;
+  outline: none;
+  box-sizing: border-box;
+}
+.black {
+  color: #111111;
+}
+.darkgray {
+  color: #1E1823;
+}
+.orange {
+  color: #FD9222;
+}
+.beige {
+  color: #FCF1E0;
+}
+.light{
+  color: #FAFAFA;
 }
 
 body {
-  /* background-color: #60ee60; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  /* letter-spacing: -0.02em; */
+  background-color: #fafafa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 main {
   flex-grow: 1;
+}
+.container {
+  width: 1200px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+.banner {
+  background-image: url('../images/chocolate-covered.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(30, 24, 35, 0.4);
+  height: 600px;
+  border-radius: 30px;
+}
+
+.banner .container {
+  height: 100%;
+}
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  /* align-items: end; */
+  height: 100%;
+  padding: 0 72px 40px;
+  gap: 32px;
+}
+
+.banner-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #fff;
+  max-width: 484px;
+}
+.banner-box-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 14px;
+  width: 100%;
+}
+
+.banner-btn {
+  background-color: #FD9222;
+  border: none;
+  border-radius: 100px;
+  padding: 14px 40px;
+  width: 144px;
+  height: 45px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.banner-link-how-made {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  display: flex;
+  width: 183px;
+  height: 45px;
+  padding: 14px 39px;
+  color: #fff;
+}
+
+.banner-link-scroll {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.banner-link-how-made:focus, 
+.banner-link-how-made:hover, 
+.banner-link-how-made:active {color: #fff;}
+
+.banner-link-how-made:focus, 
+.banner-link-how-made:hover, 
+.banner-link-how-made:active {color: #fff;}
+
+
+.banner-link-scroll {
+ 
+}
+
+
+.ingredients {
+
+  background-color: #1e1823;
+}
+
+.footer {
+  background-color: #1e1823;
 }
