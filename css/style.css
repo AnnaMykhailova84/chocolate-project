@@ -40,6 +40,19 @@ main {
   padding: 0 32px;
   margin: 0 auto;
 }
+.header-contact-link>svg {
+  fill: transparent;
+  stroke: #1E1823; 
+  transition: srtoke 0.3s, ease 0.3s;
+}
+
+.header-contact-link:hover svg,
+.header-contact-link:focus svg{
+  fill: #FD9222;
+  stroke: #FD9222; 
+}
+
+
 .banner {
   background-image: url('../images/chocolate-covered.jpg');
   background-repeat: no-repeat;
