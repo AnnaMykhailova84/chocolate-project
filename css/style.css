@@ -35,23 +35,113 @@ body {
 main {
   flex-grow: 1;
 }
+
+.hidden-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .container {
-  width: 1200px;
-  padding: 0 32px;
+  width: 100%;
+  max-width: 375px;
+  padding: 0 20px;
   margin: 0 auto;
 }
-.header-contact-link>svg {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 90px;
+  padding: 30px 0;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  position: relative;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+  color: #111;
+}
+
+.logo-choco {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: -1px;
+  right: -27px;
+}
+
+.logo-italy {
+  font-style: italic;
+}
+
+.header-nav-list {
+  display: none;
+}
+
+.header-nav-item {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.header-nav-link {
+  color: #111;
+  transition: color 0.2s ease;
+}
+.header-nav-item:hover .header-nav-link,
+.header-nav-item:focus .header-nav-link,
+.header-nav-item:active .header-nav-link {
+  color: #FD9222;
+}
+
+.header-contacts {
+  display: none;
+}
+
+.header-contact-item {
+  /* background-color: #65d78b; */
+}
+.header-contact-link>.contact-insta, 
+.header-contact-link>.contact-twitt {
   fill: transparent;
   stroke: #1E1823; 
   transition: srtoke 0.3s, ease 0.3s;
 }
 
-.header-contact-link:hover svg,
-.header-contact-link:focus svg{
-  fill: #FD9222;
+.header-contact-link:hover .contact-insta,
+.header-contact-link:hover .contact-twitt,
+.header-contact-link:focus .contact-insta, 
+  .header-contact-link:focus .contact-twitt {
   stroke: #FD9222; 
 }
 
+.header-contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-mob-btn-bar {
+  display: block;
+  cursor: pointer;
+  /* background-color: #65d78b; */
+}
 
 .banner {
   background-image: url('../images/chocolate-covered.jpg');
@@ -150,4 +240,56 @@ main {
 
 .footer {
   background-color: #1e1823;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+    max-width: 768px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 30px 0;
+  }
+  
+
+  .header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .header-contacts{
+    display: block;
+  }
+  
+  .header-mob-btn-bar {
+    display: none;
+  }
+  
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .header {
+    gap: 90px;
+  }
+  .logo {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+  .logo-choco {
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    right: -30px;
+  }
 }

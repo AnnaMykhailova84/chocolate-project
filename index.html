@@ -13,7 +13,11 @@
 <body>
   <header class="header container">
     <nav class="header-nav">
-      <a href="./index.html" class="logo">SIMPLY CHOCOLATE</a>
+      <a href="./index.html" class="logo"><span class="logo-italy">SIMPLY</span> CHOCOLATE
+        <svg class="logo-choco">
+          <use href="./images/icons-sprite.svg#chocolate-icon"></use>
+        </svg>
+      </a>
       <ul class="header-nav-list">
         <li class="header-nav-item">
           <a href="" class="header-nav-link">
@@ -50,9 +54,14 @@
         </li>
       </ul>
     </address>
+    <div class="header-mob-btn-bar">
+      <svg class="header-mob-btn-icon" width="28" height="28">
+        <use href="./images/icons-sprite.svg#menu-bar" ></use>
+      </svg>
+    </div>
   </header>
-  <main class="main">
-    <section class="banner">
+  <main class="main ">
+    <section class="banner hidden-box">
       <div class="container">
         <div class="banner-container ">
           <h1 class="banner-title">
@@ -67,7 +76,7 @@
         </div>
       </div>
     </section>
-    <section class="stand-out">
+    <section class="stand-out hidden-box">
       <div class="stand-out-container container">
         <h2 class="stand-out-title-hidden">Features</h2>
         <ul class="stand-out-list">
@@ -98,7 +107,7 @@
 
       </div>
     </section>
-    <section class="ingredients">
+    <section class="ingredients hidden-box">
       <div class="ingredients-container container">
         
         <h2 class="ingredients-title">
@@ -129,7 +138,7 @@
         </ul>
       </div>
     </section>
-    <section class="how-made" id="how-made">
+    <section class="how-made hidden-box" id="how-made">
       <div class="how-made-container container">
 
         <h2 class="how-made-title">how it’s made?</h2>
@@ -159,7 +168,7 @@
         </div>
       </div>
     </section>
-    <section class="testimonials">
+    <section class="testimonials hidden-box">
       <div class="testimonials-container container">
 
         <h2 class="testimonials-title">chocolate is loved</h2>
