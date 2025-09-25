@@ -25,7 +25,10 @@
     <path   stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6667" d="M22.667 2.667H9.334a6.667 6.667 0 0 0-6.667 6.667v13.333a6.667 6.667 0 0 0 6.667 6.667h13.333a6.667 6.667 0 0 0 6.667-6.667V9.334a6.667 6.667 0 0 0-6.667-6.667z"/>
     <path   stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6667" d="M21.333 15.16a5.329 5.329 0 0 1-2.878 5.546 5.337 5.337 0 0 1-6.169-.992 5.33 5.33 0 0 1 1.316-8.505 5.336 5.336 0 0 1 6.228.962 5.328 5.328 0 0 1 1.504 2.989zM23.333 8.667h.013"/>
   </svg>
-  <svg id="menu-bar" viewBox="0 0 1024 1024">
-    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="73.1429" d="M128 512h768M128 256h768M128 768h768"/>
+  <svg id="menu-bar" x="0" y="0" viewBox="0 0 1024 1024">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="73.1429" d="M128 512h768M128 256h768M128 768h768"/>
+  </svg>
+  <svg id="close-btn" x="0" y="0" viewBox="0 0 32 32">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.5714" d="M29.333 2.667 2.666 29.334m0-26.667 26.667 26.667"/>
   </svg>
 </svg>
