@@ -48,7 +48,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  /* letter-spacing: -0.02em; */
   background-color: #fafafa;
   min-height: 100vh;
   display: flex;
@@ -61,7 +60,6 @@ main {
 .container {
   width: 100%;
   max-width: 375px;
-  padding: 0 20px;
   margin: 0 auto;
 }
 .header-container {
@@ -73,7 +71,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 90px;
-  padding: 30px 0;
+  padding: 20px;
 }
 .header-nav {
   display: flex;
@@ -130,7 +128,6 @@ main {
 }
 
 .header-contact-item {
-  /* background-color: #65d78b; */
 }
 .header-contact-link>.contact-insta, 
 .header-contact-link>.contact-twitt {
@@ -153,14 +150,21 @@ main {
 }
 
 .header-mob-btn-bar {
-  display: block;
+  display: flex;
   cursor: pointer;
-  background-color: #65d78b;
-  stroke: #111;
+  width: 28px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+}
+.header-mob-btn-icon {
+  fill: transparent;
+  stroke: #111; 
   transition: stroke 0.3s, ease 0.3s;
 }
-.header-mob-btn-bar:hover,
-.header-mob-btn-bar:focus {
+
+.header-mob-btn-bar:hover .header-mob-btn-icon,
+.header-mob-btn-bar:focus .header-mob-btn-icon{
   stroke: #FD9222;
 }
 
@@ -179,22 +183,34 @@ main {
   /* transition: opacity 0.3s ease, visibility 0.3s ease; */
 }
 
+.header-mob-menu-container {
+  max-width: 375px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  padding: 136px 20px 20px;
+  margin: 0 auto;
+}
+
 .is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 .header-mob-close-btn {
-  display: block ;
   position: absolute;
   top: 20px;
   right: 20px;
-  padding: 8px;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
   stroke: #fff;
   cursor: pointer;
   transition: stroke 0.3s, ease 0.3s;
-  /* background-color: #65d78b; */
 }
+
 .header-mob-close-btn:hover,
 .header-mob-close-btn:focus {
   stroke: #FD9222;
@@ -209,7 +225,6 @@ main {
   line-height: 1.1;
   letter-spacing: -0.02em;
   height: 100%;
-  padding: 136px 20px 20px;
 }
 
 .header-mob-menu-list {
@@ -246,7 +261,6 @@ main {
   fill: transparent;
   stroke: #fff; 
   transition: srtoke 0.3s, ease 0.3s;
-  /* background-color: #65d78b; */
 }
 
 .header-mob-contact-icon:hover,
@@ -352,10 +366,97 @@ main {
 .footer {
   background-color: #1e1823;
 }
+.footer-container {
+  padding: 32px 20px;
+}
+.footer-top {
+  position: relative;
+  margin-bottom: 64px;
+}
+.footer-top::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* width: 335px; */
+    /* height: 0px; */
+    /* transform: rotate(-180deg); */
+}
+.footer-top-ad {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  color: #fff;
+  span {
+    color: #FD9222;
+  }
+}
+
+.footer-top-contact {
+  margin-top: 32px;
+  font-family: inherit;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: left;
+  color: #fff;
+}
+.footer-top-title {
+  font-weight: 500;
+}
+.footer-top-contact-list {
+  margin-top: 14px;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-top-contact-item {}
+.footer-top-contact-link {
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom {}
+.footer-bottom-nav {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.footer-bottom-nav-list {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.footer-bottom-nav-item {
+  
+}
+.footer-bottom-nav-link {  
+  color: #fff;
+  transition: color 0.2s ease;
+}
+.footer-bottom-nav-link:hover,
+.footer-bottom-nav-link:focus {  
+  color: #FD9222;
+}
+
+.footer-bottom-form {}
 
 @media screen and (min-width: 768px) {
   .container {
-    padding: 0 32px;
     max-width: 768px;
   }
   
@@ -364,10 +465,9 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 48px;
-    padding: 30px 0;
+    padding: 32px;
   }
   
-
   .header-nav-list {
     display: flex;
     align-items: center;
