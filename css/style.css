@@ -32,16 +32,16 @@ img {
   color: #111111;
 }
 .darkgray {
-  color: #1E1823;
+  color: #1e1823;
 }
 .orange {
-  color: #FD9222;
+  color: #fd9222;
 }
 .beige {
-  color: #FCF1E0;
+  color: #fcf1e0;
 }
-.light{
-  color: #FAFAFA;
+.light {
+  color: #fafafa;
 }
 
 .btn-orange {
@@ -53,8 +53,7 @@ img {
   font-size: 14px;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover,
   &:focus {
@@ -72,17 +71,16 @@ img {
   border-radius: 100px;
   background-color: transparent;
   cursor: pointer;
-  transition: border 0.3s ease,
-    color 0.3s ease;
+  transition: border 0.3s ease, color 0.3s ease;
   &:hover,
   &:focus {
-    color: #FD9222;
-    border: 1px solid #FD9222;
+    color: #fd9222;
+    border: 1px solid #fd9222;
   }
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
   background-color: #fafafa;
@@ -127,7 +125,7 @@ main {
   color: #111;
   &::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     width: 21px;
     height: 21px;
@@ -161,7 +159,7 @@ main {
 .header-nav-item:hover .header-nav-link,
 .header-nav-item:focus .header-nav-link,
 .header-nav-item:active .header-nav-link {
-  color: #FD9222;
+  color: #fd9222;
 }
 
 .header-contacts {
@@ -170,18 +168,18 @@ main {
 
 .header-contact-item {
 }
-.header-contact-link>.contact-insta, 
-.header-contact-link>.contact-twitt {
+.header-contact-link > .contact-insta,
+.header-contact-link > .contact-twitt {
   fill: transparent;
-  stroke: #1E1823; 
+  stroke: #1e1823;
   transition: srtoke 0.3s, ease 0.3s;
 }
 
 .header-contact-link:hover .contact-insta,
 .header-contact-link:hover .contact-twitt,
-.header-contact-link:focus .contact-insta, 
-  .header-contact-link:focus .contact-twitt {
-  stroke: #FD9222; 
+.header-contact-link:focus .contact-insta,
+.header-contact-link:focus .contact-twitt {
+  stroke: #fd9222;
 }
 
 .header-contacts-list {
@@ -200,13 +198,13 @@ main {
 }
 .header-mob-btn-icon {
   fill: transparent;
-  stroke: #111; 
+  stroke: #111;
   transition: stroke 0.3s, ease 0.3s;
 }
 
 .header-mob-btn-bar:hover .header-mob-btn-icon,
-.header-mob-btn-bar:focus .header-mob-btn-icon{
-  stroke: #FD9222;
+.header-mob-btn-bar:focus .header-mob-btn-icon {
+  stroke: #fd9222;
 }
 
 .header-mob-menu {
@@ -217,7 +215,7 @@ main {
   width: 100%;
   height: 100vh;
   background-color: #1e1823;
-  z-index: 100; 
+  z-index: 100;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -242,7 +240,7 @@ main {
   position: absolute;
   top: 20px;
   right: 20px;
-  display: flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 28px;
@@ -254,7 +252,7 @@ main {
 
 .header-mob-close-btn:hover,
 .header-mob-close-btn:focus {
-  stroke: #FD9222;
+  stroke: #fd9222;
 }
 
 .header-mob-nav {
@@ -272,10 +270,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  flex-grow: 1;  
+  flex-grow: 1;
 }
-.header-mob-menu-item{
-  
+.header-mob-menu-item {
 }
 .header-mob-menu-link {
   color: #fff;
@@ -285,36 +282,38 @@ main {
 .header-mob-menu-link:hover,
 .header-mob-menu-link:focus,
 .header-mob-menu-link:active {
-  color:#FD9222
+  color: #fd9222;
 }
 
-
-.header-mob-contacts {}
+.header-mob-contacts {
+}
 .header-mob-contacts-list {
   display: flex;
   align-items: center;
   gap: 18px;
 }
-.header-mob-contact-item {}
-.header-mob-contact-link {}
+.header-mob-contact-item {
+}
+.header-mob-contact-link {
+}
 
 .header-mob-contact-icon {
   fill: transparent;
-  stroke: #fff; 
+  stroke: #fff;
   transition: srtoke 0.3s, ease 0.3s;
 }
 
 .header-mob-contact-icon:hover,
 .header-mob-contact-icon:focus {
-  stroke: #FD9222; 
+  stroke: #fd9222;
 }
 
 .banner {
   background-color: #1e1823;
   background-image: linear-gradient(
-    to bottom,
-    rgba(30, 24, 35, 0.4),
-    rgba(30, 24, 35, 0.4)
+      to bottom,
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)
     ),
     url('../images/chocolate-covered-mob.jpg');
   background-repeat: no-repeat;
@@ -323,12 +322,13 @@ main {
   margin: 0 auto;
   max-width: 1200px;
   border-radius: 30px;
-  @media screen and (min-resolution: 2x),
-                    (-webkit-min-device-pixel-ratio: 2) {
+  margin-bottom: 60px;
+  @media screen and (min-resolution: 2x), (-webkit-min-device-pixel-ratio: 2) {
     background-image: linear-gradient(
-      to bottom,
-      rgba(30, 24, 35, 0.4),
-      rgba(30, 24, 35, 0.4)),
+        to bottom,
+        rgba(30, 24, 35, 0.4),
+        rgba(30, 24, 35, 0.4)
+      ),
       url('../images/chocolate-covered-mob@2x.jpg');
   }
 }
@@ -339,7 +339,7 @@ main {
 .banner-container {
   display: flex;
   flex-direction: column;
-  justify-content:flex-end;
+  justify-content: flex-end;
   height: 100%;
   padding: 395px 40px 27px;
   gap: 32px;
@@ -375,19 +375,19 @@ main {
 
 .banner-link-scroll {
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
-  margin-left: 0;  
+  margin-left: 0;
   margin-top: 40px;
   transition: color 0.2s ease;
 }
 
 .banner-link-scroll::after {
-  content: "";
+  content: '';
   position: absolute;
   display: inline-block;
   width: 38px;
@@ -399,39 +399,78 @@ main {
   background-size: auto;
   background-image: url(../images/arrow-orange.svg);
   background-color: #fff;
-  transition: background-color 0.2s ease, 
-              background-image 0.2s ease;
+  transition: background-color 0.2s ease, background-image 0.2s ease;
   border-radius: 50%;
 }
 
 .banner-link-scroll:hover,
-.banner-link-scroll:focus,  
+.banner-link-scroll:focus,
 .banner-link-scroll:active {
-  color: #FD9222; 
+  color: #fd9222;
 }
 .banner-link-scroll:hover::after,
-.banner-link-scroll:focus,  
+.banner-link-scroll:focus,
 .banner-link-scroll:active {
-  background-color: #FD9222; 
+  background-color: #fd9222;
   background-image: url(../images/arrow-white.svg);
 }
 
-/* .banner-link-how-made:focus, 
-.banner-link-how-made:hover, 
-.banner-link-how-made:active {color: #fff;} */
-
-/* .banner-link-how-made:focus, 
-.banner-link-how-made:hover, 
-.banner-link-how-made:active {color: #fff;} */
-
-
-.banner-link-scroll {
- 
+.stand-out {
+  background-color: #1e1823;
+  color: rgb(255, 255, 255);
+  font-family: inherit;
+}
+.stand-out-container {
+  padding: 20px;
+}
+.stand-out-title-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+.stand-out-list {
+  display: block;
 }
 
+.stand-out-item {
+  width: 100%;
+  margin-bottom: 38px;
+}
+.stand-out-img-box {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+}
+.stand-out-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  fill: #fd9222;
+  transform: translate(-50%, -50%);
+}
 
-.ingredients {
-  background-color: #1e1823;
+.stand-out-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.stand-out-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.02em;
 }
 
 .footer {
@@ -445,7 +484,7 @@ main {
   margin-bottom: 64px;
 }
 .footer-top::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: -32px;
@@ -454,9 +493,9 @@ main {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.1);
   /* border: 1px solid rgba(255, 255, 255, 0.1); */
-    /* width: 335px; */
-    /* height: 0px; */
-    /* transform: rotate(-180deg); */
+  /* width: 335px; */
+  /* height: 0px; */
+  /* transform: rotate(-180deg); */
 }
 .footer-top-ad {
   font-family: inherit;
@@ -466,7 +505,7 @@ main {
   letter-spacing: -0.02em;
   color: #fff;
   span {
-    color: #FD9222;
+    color: #fd9222;
   }
 }
 
@@ -492,13 +531,15 @@ main {
   gap: 4px;
 }
 
-.footer-top-contact-item {}
+.footer-top-contact-item {
+}
 .footer-top-contact-link {
   color: #fff;
   transition: color 0.2s ease;
 }
 
-.footer-bottom {}
+.footer-bottom {
+}
 .footer-bottom-nav {
   font-family: inherit;
   font-weight: 500;
@@ -513,7 +554,6 @@ main {
   gap: 18px;
 }
 .footer-bottom-nav-item {
- 
 }
 .footer-mob-link {
   display: block;
@@ -522,13 +562,13 @@ main {
   }
 }
 
-.footer-bottom-nav-link {  
+.footer-bottom-nav-link {
   color: #fff;
   transition: color 0.2s ease;
 }
 .footer-bottom-nav-link:hover,
-.footer-bottom-nav-link:focus {  
-  color: #FD9222;
+.footer-bottom-nav-link:focus {
+  color: #fd9222;
 }
 
 .footer-bottom-form {
@@ -542,8 +582,8 @@ main {
       flex-grow: 1;
       width: 100%;
       height: 45px;
-      border: none; 
-      border: 1.50px solid rgba(255, 255, 255, 0.15);
+      border: none;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
       border-radius: 30px;
       padding: 14px 18px;
       background-color: transparent;
@@ -555,12 +595,12 @@ main {
         font-size: 14px;
         line-height: 1.29;
         letter-spacing: -0.02em;
-        font-family: "Montserrat", sans-serif;
+        font-family: 'Montserrat', sans-serif;
         color: rgba(255, 255, 255, 0.3);
       }
       &:focus,
       &:hover {
-        border: 1.50px solid rgba(253, 146, 34, 0.5);
+        border: 1.5px solid rgba(253, 146, 34, 0.5);
       }
       &:focus::placeholder,
       &:hover::placeholder {
@@ -573,40 +613,38 @@ main {
     /* width: 120px;
     height: 45px; */
   }
-
 }
 
 @media screen and (max-width: 374px) {
   .footer-bottom-form {
     flex-wrap: wrap;
     label {
-        width: 100%;
-      }
+      width: 100%;
+    }
     .footer-form-btn {
-        width: 100%;
-      }
+      width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 400px) {
-  
   .banner-box-btn {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 32px 0;
-      flex-wrap: nowrap;
-    }
-    .banner-link-scroll {
-      margin-top: 0;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px 0;
+    flex-wrap: nowrap;
+  }
+  .banner-link-scroll {
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
-  
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -614,30 +652,35 @@ main {
     gap: 48px;
     padding: 32px;
   }
-  
+
   .header-nav-list {
     display: flex;
     align-items: center;
     gap: 24px;
   }
-  .header-contacts{
+  .header-contacts {
     display: block;
   }
-  
+
   .header-mob-btn-bar {
     display: none;
   }
-  
+
   .banner {
-    background-image: linear-gradient(to bottom,
+    margin-bottom: 40px;
+    background-image: linear-gradient(
+        to bottom,
         rgba(30, 24, 35, 0.4),
-        rgba(30, 24, 35, 0.4)),
+        rgba(30, 24, 35, 0.4)
+      ),
       url('../images/chocolate-covered-tab.jpg');
     @media screen and (min-resolution: 2x),
-                      (-webkit-min-device-pixel-ratio: 2) {
-      background-image: linear-gradient(to bottom,
-        rgba(30, 24, 35, 0.4),
-        rgba(30, 24, 35, 0.4)),
+      (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(30, 24, 35, 0.4),
+          rgba(30, 24, 35, 0.4)
+        ),
         url('../images/chocolate-covered-tab@2x.jpg');
     }
   }
@@ -655,15 +698,31 @@ main {
   .banner-btn {
     padding: 14px 40px;
   }
-  
+
   .banner-link-how-made {
     padding: 14px 40px;
   }
   .banner-link-scroll {
-      margin-left: auto;  
-      margin-top: 0;
-    }
-  
+    margin-left: auto;
+    margin-top: 0;
+  }
+
+  .stand-out-container {
+    padding: 50px 32px;
+  }
+
+  .stand-out-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+  .stand-out-item {
+    flex-basis: calc((100% - 32px) / 2);
+    padding-right: 28px;
+    margin-bottom: 0;
+  }
+
   .footer-container {
     padding: 50px 32px;
   }
@@ -709,15 +768,14 @@ main {
     .footer-form-btn {
       padding: 14px 28px;
     }
-  }  
-  
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
-  
+
   .header {
     gap: 90px;
   }
@@ -725,40 +783,69 @@ main {
     font-size: 18px;
     line-height: 1.11;
     &::after {
-        width: 24px;
-        height: 24px;
-        top: -1px;
-        right: -30px;
+      width: 24px;
+      height: 24px;
+      top: -1px;
+      right: -30px;
     }
-  } 
-  
+  }
+
   .banner {
-    background-image: linear-gradient(to bottom,
+    margin-bottom: 72px;
+    background-image: linear-gradient(
+        to bottom,
         rgba(30, 24, 35, 0.4),
-        rgba(30, 24, 35, 0.4)),
+        rgba(30, 24, 35, 0.4)
+      ),
       url('../images/chocolate-covered.jpg');
 
     @media screen and (min-resolution: 2x),
-    (-webkit-min-device-pixel-ratio: 2) {
-      background-image: linear-gradient(to bottom,
+      (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(
+          to bottom,
           rgba(30, 24, 35, 0.4),
-          rgba(30, 24, 35, 0.4)),
+          rgba(30, 24, 35, 0.4)
+        ),
         url('../images/chocolate-covered@2x.jpg');
     }
   }
-  .banner-container {
-    /* padding: 381px 72px 40px; */
-    /* max-width: 870px; */
-    /* margin: 0 auto; */
-    /* gap: 40px; */
+  .banner-title {
+    max-width: 484px;
   }
 
-  .banner-title {
-    /* font-size: 32px; */
-    /* line-height: 1.19; */
-    max-width: 484px;
-    /* margin-bottom: 40px; */
+  .stand-out-container {
+    padding: 50px;
   }
+
+  .stand-out-list {
+    gap: 70px;
+  }
+
+  .stand-out-item {
+    position: relative;
+    flex-basis: calc((100% - 140px) / 3);
+    padding-right: 18px;
+    &:not(:nth-child(3n))::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 124px;
+      background-color: rgba(255, 255, 255, 0.5);
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+  /* .stand-out-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 124px;
+      background-color: rgba(255, 255, 255, 0.5);
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
+  } */
 
   .footer-bottom-nav-list {
     gap: 24px;
@@ -770,7 +857,7 @@ main {
         height: 52px;
         padding: 14px 24px;
       }
-    }    
+    }
     .footer-form-btn {
       padding: 17px 32px;
       /* width: 137px;
