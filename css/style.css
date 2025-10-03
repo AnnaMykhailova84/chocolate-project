@@ -45,13 +45,9 @@ img {
 }
 
 .btn-orange {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
   background-color: #fd9222;
   border: none;
-  border-radius: 30px;
+  border-radius: 100px;
   font-family: inherit;
   font-weight: 600;
   font-size: 14px;
@@ -74,11 +70,7 @@ img {
   color: #fff;
   border: 1px solid #fff;
   border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: transparent;
-  flex-shrink: 0;
   cursor: pointer;
   transition: border 0.3s ease,
     color 0.3s ease;
@@ -133,14 +125,18 @@ main {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #111;
-}
-
-.logo-choco {
-  position: absolute;
-  width: 21px;
-  height: 21px;
-  top: -1px;
-  right: -27px;
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    background-image: url(../images/logo-img.svg);
+    background-repeat: no-repeat;
+    background-position: contain;
+    top: -1px;
+    right: -27px;
+  }
 }
 
 .logo-italy {
@@ -314,13 +310,27 @@ main {
 }
 
 .banner {
-  background-image: url('../images/chocolate-covered.jpg');
+  background-color: #1e1823;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(30, 24, 35, 0.4),
+    rgba(30, 24, 35, 0.4)
+    ),
+    url('../images/chocolate-covered-mob.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: rgba(30, 24, 35, 0.4);
-  height: 600px;
+  margin: 0 auto;
+  max-width: 1200px;
   border-radius: 30px;
+  @media screen and (min-resolution: 2x),
+                    (-webkit-min-device-pixel-ratio: 2) {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)),
+      url('../images/chocolate-covered-mob@2x.jpg');
+  }
 }
 
 .banner .container {
@@ -330,72 +340,89 @@ main {
   display: flex;
   flex-direction: column;
   justify-content:flex-end;
-  /* align-items: end; */
   height: 100%;
-  padding: 0 72px 40px;
+  padding: 395px 40px 27px;
   gap: 32px;
 }
 
 .banner-title {
-  font-family: "Montserrat", sans-serif;
+  font-family: inherit;
   font-weight: 500;
-  font-size: 28px;
-  line-height: 1.21;
+  font-size: 20px;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   color: #fff;
-  max-width: 484px;
+  max-width: 295px;
+  margin-bottom: 32px;
 }
 .banner-box-btn {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
   align-items: baseline;
-  gap: 14px;
+  /* gap: 32px 14px; */
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .banner-btn {
-  background-color: #FD9222;
-  border: none;
-  border-radius: 100px;
-  padding: 14px 40px;
-  width: 144px;
-  height: 45px;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  color: #fff;
-  cursor: pointer;
+  padding: 12px 28px;
+  margin-right: 14px;
 }
 
 .banner-link-how-made {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  border: 1px solid #fff;
-  border-radius: 100px;
-  display: flex;
-  width: 183px;
-  height: 45px;
-  padding: 14px 39px;
-  color: #fff;
+  padding: 12px 28px;
 }
 
 .banner-link-scroll {
+  position: relative;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: 0;  
+  margin-top: 40px;
+  transition: color 0.2s ease;
 }
 
-.banner-link-how-made:focus, 
-.banner-link-how-made:hover, 
-.banner-link-how-made:active {color: #fff;}
+.banner-link-scroll::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  top: -50%;
+  margin-left: 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  background-image: url(../images/arrow-orange.svg);
+  background-color: #fff;
+  transition: background-color 0.2s ease, 
+              background-image 0.2s ease;
+  border-radius: 50%;
+}
 
-.banner-link-how-made:focus, 
+.banner-link-scroll:hover,
+.banner-link-scroll:focus,  
+.banner-link-scroll:active {
+  color: #FD9222; 
+}
+.banner-link-scroll:hover::after,
+.banner-link-scroll:focus,  
+.banner-link-scroll:active {
+  background-color: #FD9222; 
+  background-image: url(../images/arrow-white.svg);
+}
+
+/* .banner-link-how-made:focus, 
 .banner-link-how-made:hover, 
-.banner-link-how-made:active {color: #fff;}
+.banner-link-how-made:active {color: #fff;} */
+
+/* .banner-link-how-made:focus, 
+.banner-link-how-made:hover, 
+.banner-link-how-made:active {color: #fff;} */
 
 
 .banner-link-scroll {
@@ -542,8 +569,9 @@ main {
     }
   }
   .footer-form-btn {
-    width: 120px;
-    height: 45px;
+    padding: 14px 24px;
+    /* width: 120px;
+    height: 45px; */
   }
 
 }
@@ -558,6 +586,20 @@ main {
         width: 100%;
       }
   }
+}
+
+@media screen and (max-width: 400px) {
+  
+  .banner-box-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px 0;
+      flex-wrap: nowrap;
+    }
+    .banner-link-scroll {
+      margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -585,7 +627,43 @@ main {
   .header-mob-btn-bar {
     display: none;
   }
+  
+  .banner {
+    background-image: linear-gradient(to bottom,
+        rgba(30, 24, 35, 0.4),
+        rgba(30, 24, 35, 0.4)),
+      url('../images/chocolate-covered-tab.jpg');
+    @media screen and (min-resolution: 2x),
+                      (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(to bottom,
+        rgba(30, 24, 35, 0.4),
+        rgba(30, 24, 35, 0.4)),
+        url('../images/chocolate-covered-tab@2x.jpg');
+    }
+  }
 
+  .banner-container {
+    padding: 671px 72px 40px;
+    /* gap: 40px; */
+  }
+
+  .banner-title {
+    font-size: 28px;
+    line-height: 1.21;
+    max-width: 484px;
+  }
+  .banner-btn {
+    padding: 14px 40px;
+  }
+  
+  .banner-link-how-made {
+    padding: 14px 40px;
+  }
+  .banner-link-scroll {
+      margin-left: auto;  
+      margin-top: 0;
+    }
+  
   .footer-container {
     padding: 50px 32px;
   }
@@ -629,13 +707,11 @@ main {
       width: 232px;
     }
     .footer-form-btn {
-      width: 128px;
+      padding: 14px 28px;
     }
   }  
   
 }
-
-
 
 @media screen and (min-width: 1200px) {
   .container {
@@ -648,14 +724,42 @@ main {
   .logo {
     font-size: 18px;
     line-height: 1.11;
-  }
-  .logo-choco {
-    width: 24px;
-    height: 24px;
-    top: -1px;
-    right: -30px;
-  }
+    &::after {
+        width: 24px;
+        height: 24px;
+        top: -1px;
+        right: -30px;
+    }
+  } 
   
+  .banner {
+    background-image: linear-gradient(to bottom,
+        rgba(30, 24, 35, 0.4),
+        rgba(30, 24, 35, 0.4)),
+      url('../images/chocolate-covered.jpg');
+
+    @media screen and (min-resolution: 2x),
+    (-webkit-min-device-pixel-ratio: 2) {
+      background-image: linear-gradient(to bottom,
+          rgba(30, 24, 35, 0.4),
+          rgba(30, 24, 35, 0.4)),
+        url('../images/chocolate-covered@2x.jpg');
+    }
+  }
+  .banner-container {
+    /* padding: 381px 72px 40px; */
+    /* max-width: 870px; */
+    /* margin: 0 auto; */
+    /* gap: 40px; */
+  }
+
+  .banner-title {
+    /* font-size: 32px; */
+    /* line-height: 1.19; */
+    max-width: 484px;
+    /* margin-bottom: 40px; */
+  }
+
   .footer-bottom-nav-list {
     gap: 24px;
   }
@@ -668,8 +772,9 @@ main {
       }
     }    
     .footer-form-btn {
-      width: 137px;
-      height: 52px;
+      padding: 17px 32px;
+      /* width: 137px;
+      height: 52px; */
     }
   }
 }
