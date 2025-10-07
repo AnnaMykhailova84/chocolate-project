@@ -569,6 +569,10 @@ main {
   border: 1px solid #fd9222;
   font-family: inherit;
   color: #111;
+  /* text-overflow: ellipsis; */
+  /* overflow: hidden; */
+  /* white-space: wrap; */
+  scroll-behavior: smooth;
 }
 .ingredients-item:hover .ingredients-desc-box,
 .ingredients-item:focus .ingredients-desc-box,
@@ -621,6 +625,92 @@ main {
   font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+  white-space: nowrap; 
+  /* Prevents text from wrapping to the next line */
+  /* overflow: hidden;   */
+  /* Hides any overflowing content */
+  text-overflow: ellipsis;  
+  /* Displays an ellipsis (...) to indicate truncated text */
+}
+
+.how-made-container {
+  padding: 0 20px 60px;
+  font-family: inherit;
+  color: #111;
+}
+.how-made-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+}
+.how-made-box {
+  margin: 32px auto 0;
+}
+.how-made-box-picture,
+.how-made-box-img {
+  /* display: block; */
+  margin: 0 auto 20px;
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+}
+
+.how-made-box-text {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px 14px;
+}
+
+.how-made-hook {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 20px;
+}
+.how-made-hook-list {
+  display: block;
+}
+.how-made-hook-item {
+  position: relative;
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.how-made-hook-item::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  border: 1px solid #ececec;
+  top : 4px;
+  left: -16px;
+}
+.testimonials-container {
+  padding: 60px 20px;
+  font-family: inherit;
+  color: #111;
+}
+.testimonials-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .footer {
@@ -891,9 +981,35 @@ main {
     margin-top: 50px;
     gap: 32px;
   }
-    .ingredients-item {
-      flex-basis: calc((100% - 32px) / 2);
-    }
+  .ingredients-item {
+    flex-basis: calc((100% - 32px) / 2);
+    margin-bottom: 0;
+  }
+  
+  .how-made-container {
+    padding: 0 77px 80px;
+  }
+
+  .how-made-title {
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  .how-made-box {
+    margin: 50px auto 0;
+  }
+  .how-made-box-text {
+    padding: 32px;
+  }
+
+  .how-made-hook {
+    margin-bottom: 28px;
+  }
+
+  .how-made-hook-list {
+    display: block;
+  }
+
 
   .footer-container {
     padding: 50px 32px;
@@ -963,6 +1079,7 @@ main {
   }
 
   .banner {
+    max-width: 100%;
     margin-bottom: 72px;
     background-image: linear-gradient(
         to bottom,
@@ -1015,7 +1132,58 @@ main {
       background-color: rgba(255, 255, 255, 0);
     } 
   }
+  
+  .ingredients-container {
+    padding: 100px 32px;
+  }
 
+  .ingredients-title {
+    padding: 0 390px 28px;
+
+  }
+
+  .ingredients-title-text {
+    padding: 0 355px 0;
+  }
+
+  .ingredients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 19px;
+  }
+
+  .ingredients-item {
+    flex-basis: calc((100% - 57px) / 4);
+  }
+  
+  .ingredients-desc-box {
+    padding: 20px;
+  }
+
+  .how-made-container {
+    padding: 0 32px;
+  }
+
+  .how-made-box {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+  }
+  .how-made-picture,
+  .how-made-box-img {
+    margin: 0;
+    min-width: 600px;
+  }
+
+  .how-made-hook {
+    margin-bottom: 28px;
+  }
+
+  .how-made-hook-list {
+    display: block;
+  }
+  
   .footer-bottom-nav-list {
     gap: 24px;
   }
@@ -1033,4 +1201,80 @@ main {
       height: 52px; */
     }
   }
+}
+
+
+/* ============================================ */
+.text-wrapper {
+  display: inline-block;
+  position: relative;
+  max-width: 400px;
+  font-family: sans-serif;
+}
+
+/* приховуємо чекбокс */
+.expand-toggle {
+  display: none;
+}
+
+/* початковий стан блоку */
+.text-box {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+  padding: 16px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: max-height 0.6s ease;
+  background: #fff;
+}
+
+/* градієнт внизу */
+.text-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, white);
+  transition: opacity 0.4s ease;
+}
+
+/* коли чекбокс увімкнено */
+.expand-toggle:checked~.text-box {
+  max-height: 500px;
+  /* або більше, якщо треба */
+}
+
+/* прибираємо градієнт у розгорнутому стані */
+.expand-toggle:checked~.text-box::after {
+  opacity: 0;
+}
+
+/* кнопка */
+.toggle-btn {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  cursor: pointer;
+  color: #007BFF;
+  font-size: 15px;
+  text-decoration: underline;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.toggle-btn:hover {
+  color: #0056b3;
+}
+
+/* текст кнопки змінюється динамічно */
+.toggle-btn::after {
+  content: "Show more";
+}
+
+.expand-toggle:checked+.text-box+.toggle-btn::after {
+  content: "Show less";
 }
