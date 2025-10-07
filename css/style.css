@@ -712,6 +712,80 @@ main {
   text-transform: uppercase;
   text-align: center;
 }
+.testimonials-box {
+  margin: 32px auto;
+}
+.testimonials-list{
+  font-family: inherit;
+  text-align: center;
+  padding-top: 42px;
+}
+
+.testimonials-card {
+  position: relative;
+  max-width: 100%;
+  width: auto;
+  height: 200px;
+  padding: 56px 18px 18px;
+  border-radius: 15px;
+  background-color: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+}
+
+.testimonials-card-img-box {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 3px rgba(17, 17, 17, 0.3);
+  overflow: hidden;
+}
+
+
+.testimonials-card-img {
+  width: 100%;
+  height: auto;
+  /* margin: 50% auto; */
+  /* transform: translateY(-50%); */
+}
+
+.testimonials-card-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #111;  
+  margin-bottom: 24px;
+}
+
+.testimonials-card-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.testimonials-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+  color: #111;
+  border: 1px solid #fd9222;
+  border-radius: 100px;
+  /* padding: 14px 40px; */
+  width: 222px;
+  height: 50px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 
 .footer {
   background-color: #1e1823;
@@ -1010,6 +1084,19 @@ main {
     display: block;
   }
 
+  .testimonials-list {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .testimonials-card {
+    padding: 56px 16px 16px;
+    flex-basis: calc((100% - 16px) / 2);    
+  }
+
 
   .footer-container {
     padding: 50px 32px;
@@ -1182,6 +1269,14 @@ main {
 
   .how-made-hook-list {
     display: block;
+  }
+  .testimonials-list {
+    gap: 28px;
+  }
+
+  .testimonials-card {
+    padding: 56px 16px 16px;
+    flex-basis: calc((100% - 56px) / 3);
   }
   
   .footer-bottom-nav-list {
