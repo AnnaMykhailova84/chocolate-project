@@ -13,6 +13,21 @@
   display: none;
 } */
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0px, 0px, 0px, 0px);
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  clip-path: inset(100%);
+  white-space: nowrap;
+}
 * {
   margin: 0;
   padding: 0;
@@ -227,7 +242,7 @@ main {
   width: 100%;
   position: relative;
   height: 100%;
-  padding: 136px 20px 20px;
+  padding: 136px 20px 50px;
   margin: 0 auto;
 }
 
@@ -634,7 +649,7 @@ main {
 }
 
 .how-made-container {
-  padding: 0 20px 60px;
+  padding: 0 20px 20px;
   font-family: inherit;
   color: #111;
 }
@@ -700,7 +715,7 @@ main {
   left: -16px;
 }
 .testimonials-container {
-  padding: 60px 20px;
+  padding: 40px 20px;
   font-family: inherit;
   color: #111;
 }
@@ -733,7 +748,8 @@ main {
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
 }
 
-.testimonials-card-img-box {
+/* .testimonials-card-img-box, */
+.testimonials-card-img  {
   position: absolute;
   width: 80px;
   height: 80px;
@@ -747,8 +763,8 @@ main {
 
 
 .testimonials-card-img {
-  width: 100%;
-  height: auto;
+  /* width: 100%; */
+  /* height: auto; */
   /* margin: 50% auto; */
   /* transform: translateY(-50%); */
 }
@@ -771,20 +787,192 @@ main {
 
 .testimonials-btn {
   display: block;
-  margin: 0 auto;
+  margin: 32px auto 20px;
   padding: 14px 20px;
   font-family: inherit;
   font-weight: 600;
   font-size: 18px;
   color: #111;
+  background-color: transparent;
   border: 1px solid #fd9222;
   border-radius: 100px;
   /* padding: 14px 40px; */
   width: 222px;
   height: 50px;
-  background-color: transparent;
   cursor: pointer;
+  transition: background-color 0.2s ease,
+              color 0.2s ease;
 }
+.testimonials-btn:hover,
+.testimonials-btn:focus {
+  background-color: #fd9222;
+  color: #fff;
+}
+
+.modal-review {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(250, 250, 250, .5);
+}
+.review-container {
+  position: relative;
+  padding: 32px 24px;
+  width: 311px;
+  max-height: 619px;
+  background-color: #fafafa;
+  border-radius: 15px;
+  margin: auto;
+  font-family: inherit;
+  box-shadow: 0 0 15px 3px rgba(17, 17, 17, 0.3);
+  /* font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6); */
+}
+
+.review-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: #111;
+  cursor: pointer;
+  transition: stroke 0.3s ease;
+}
+.review-close-btn:hover,
+.review-close-btn:focus {
+  stroke: #fd9222;
+}
+
+.review-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 32px;
+}
+.review-form-box {
+  &:not(:last-child) {
+  margin-bottom: 14px;
+  }
+  &:last-child {
+    margin-bottom: 18px;
+  }
+}
+
+.review-form-label {
+  display: block;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 4px;
+}
+
+.review-form-input {
+  position: relative;
+  input {
+    border: 1.50px solid rgba(17, 17, 17, 0.05);
+    border-radius: 8px;
+    padding: 13px 13px 13px 43px;
+    width: 100%;
+    height: 45px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    background-color: transparent;
+    transition: border .2s ease;
+  }
+  .review-form-icon {
+    position: absolute;
+    top: 14px;
+    left: 18px;
+    stroke: #404040;
+    transition: stroke .2s ease;
+  }
+  &:hover input {
+    border: 1.50px solid #fd9222;
+  }
+  &:hover .review-form-icon {
+    stroke: #fd9222;
+  }
+}
+.review-form-comment {
+  border: 1.50px solid rgba(17, 17, 17, 0.05);
+  border-radius: 8px;
+  padding: 14px 18px;
+  width: 100%;
+  height: 91px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+  background-color: transparent;
+  resize: none;
+  transition: border .2s ease;
+  &::placeholder {
+    color: rgba(64, 64, 64, 0.3);
+  }
+  &:hover {
+    border: 1.50px solid #fd9222;
+  }
+}
+.review-form-policy {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.review-policy-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+  .review-checkbox-custom {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(0, 255, 136);
+    border-radius: 6px;
+    /* border: 1px solid rgba(17, 17, 17, 0.14); */
+    background-color: #fd9222;
+    svg {
+      fill: red ;
+      stroke: blue;
+      margin: auto;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }  
+}
+
+
+.review-form-btn {
+  padding: 12px 28px;
+}
+
+.visually-hidden,
+.review-checkbox  {
+  /* visibility: hidden; */
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 
 
 .footer {
@@ -1061,7 +1249,7 @@ main {
   }
   
   .how-made-container {
-    padding: 0 77px 80px;
+    padding: 0 77px 40px;
   }
 
   .how-made-title {
@@ -1082,6 +1270,10 @@ main {
 
   .how-made-hook-list {
     display: block;
+  }
+
+  .testimonials-container {
+    padding: 40px 20px 60px;
   }
 
   .testimonials-list {
@@ -1249,7 +1441,7 @@ main {
   }
 
   .how-made-container {
-    padding: 0 32px;
+    padding: 0 32px 20px;
   }
 
   .how-made-box {
@@ -1270,6 +1462,11 @@ main {
   .how-made-hook-list {
     display: block;
   }
+  
+  .testimonials-container {
+    padding: 60px 20px 80px;
+  }
+
   .testimonials-list {
     gap: 28px;
   }
