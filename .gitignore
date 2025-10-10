@@ -1,4 +1,5 @@
 .prettierrc.json
+.vscode/
 # Logs
 logs
 *.log

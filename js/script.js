@@ -37,3 +37,5 @@
     refs.leaveReview.classList.toggle('review-open');
   }
 })();
+// console.log('hi');
+// console.log(document.querySelector('.review-form'));

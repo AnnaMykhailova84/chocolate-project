@@ -833,11 +833,6 @@ main {
   margin: auto;
   font-family: inherit;
   box-shadow: 0 0 15px 3px rgba(17, 17, 17, 0.3);
-  /* font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: -0.02em;
-  color: rgba(64, 64, 64, 0.6); */
 }
 
 .review-close-btn {
@@ -866,12 +861,7 @@ main {
   margin-bottom: 32px;
 }
 .review-form-box {
-  &:not(:last-child) {
   margin-bottom: 14px;
-  }
-  &:last-child {
-    margin-bottom: 18px;
-  }
 }
 
 .review-form-label {
@@ -900,6 +890,8 @@ main {
     position: absolute;
     top: 14px;
     left: 18px;
+    width: 17px;
+    height: 17px;
     stroke: #404040;
     transition: stroke .2s ease;
   }
@@ -933,7 +925,7 @@ main {
   display: flex;
   justify-content: flex-start;
   gap: 12px;
-  margin-bottom: 32px;
+  margin: 4px 0 32px;
 }
 
 .review-policy-label {
@@ -1292,7 +1284,79 @@ main {
     padding: 56px 16px 16px;
     flex-basis: calc((100% - 16px) / 2);    
   }
+  
+  .review-container {
+    padding: 40px;
+    width: 517px;
+    max-height: 794px;
+  }
+  
+  .review-close-btn {
+    top: 32px;
+    right: 32px;
+  }
 
+  .review-title {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 40px;
+  }
+
+  .review-form-box {
+    margin-bottom: 18px; 
+  }
+
+  .review-form-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .review-form-input {
+    position: relative;
+    font-size: 18px;
+
+    input {
+      padding: 22px 22px 22px 62px;
+      height: 68px;
+    }
+
+    .review-form-icon {
+      top: 22px;
+      left: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .review-form-comment {
+    padding: 22px 24px;
+    height: 137px;
+    font-size: 18px;
+    &::placeholder {
+      font-size: 18px;
+    }
+  }
+
+  .review-form-policy {
+    margin: 0 0 40px;
+  }
+
+  .review-policy-label {
+    font-size: 14px;
+  }
+
+
+  .review-form-btn {
+    padding: 14px 40px;
+  }
+
+  .visually-hidden,
+  .review-checkbox {
+    /* visibility: hidden; */
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
 
   .footer-container {
     padding: 50px 32px;
