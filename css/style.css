@@ -1355,12 +1355,10 @@ main {
   .review-form-input {
     position: relative;
     font-size: 18px;
-
-    input {
+    .form-input {
       padding: 22px 22px 22px 62px;
       height: 68px;
     }
-
     .review-form-icon {
       top: 22px;
       left: 24px;
