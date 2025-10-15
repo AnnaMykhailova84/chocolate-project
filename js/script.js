@@ -9,6 +9,7 @@
     openMobileBtn: document.querySelector('[data-mobileMenu-open]'),
     closeMobileBtn: document.querySelector('[data-mobileMenu-close]'),
     mobileMenu: document.querySelector('[data-mobileMenu]'),
+    menuLinks: document.querySelectorAll('.header-mob-menu-link'),
 
     openReviewBtn: document.querySelector('[data-reviewBtn-open]'),
     closeReviewBtn: document.querySelector('[data-reviewBtn-close]'),
@@ -20,8 +21,14 @@
 
   refs.openMobileBtn.addEventListener('click', toggleMobileMenu);
   refs.closeMobileBtn.addEventListener('click', toggleMobileMenu);
+  refs.menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      refs.mobileMenu.classList.remove('is-open');
+    });
+  });
   refs.openReviewBtn.addEventListener('click', toggleReview);
   refs.closeReviewBtn.addEventListener('click', toggleReview);
+ 
 
   function toggleModal() {
     // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
@@ -36,6 +43,7 @@
     // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
     refs.leaveReview.classList.toggle('review-open');
   }
+  
 })();
 // console.log('hi');
 // console.log(document.querySelector('.review-form'));

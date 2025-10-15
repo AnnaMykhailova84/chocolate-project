@@ -45,6 +45,10 @@ img {
 html {
   scroll-behavior: smooth;
 }
+:target {
+  scroll-margin-top: 0px;
+  /* змінюй під висоту свого header */
+}
 
 .black {
   color: #111111;
@@ -232,12 +236,11 @@ main {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #1e1823;
+  background-color: rgba(30, 24, 35, .9);
   z-index: 100;
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
-  /* transition: opacity 0.3s ease, visibility 0.3s ease; */
+  transform: translateY(-105%);
+  transition: transform 0.3s ease;
 }
 
 .header-mob-menu-container {
@@ -249,10 +252,9 @@ main {
   margin: 0 auto;
 }
 
-.is-open {
-  opacity: 1;
-  visibility: visible;
+.header-mob-menu.is-open {
   pointer-events: auto;
+  transform: translateY(0%);
 }
 .header-mob-close-btn {
   position: absolute;

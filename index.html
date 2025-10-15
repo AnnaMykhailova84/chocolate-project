@@ -17,10 +17,10 @@
     <title>Simply Chocolate</title>
   </head>
   <body>
-    <header class="header-container">
+    <header class="header-container" id="home">
       <div class="header container">
         <nav class="header-nav">
-          <a href="./index.html" class="logo"
+          <a href="index.html" class="logo"
             ><span class="logo-italy">SIMPLY</span> CHOCOLATE
             <!-- <svg class="logo-choco">
               <use href="./images/icons-sprite.svg#chocolate-icon"></use>
@@ -28,10 +28,10 @@
           </a>
           <ul class="header-nav-list">
             <li class="header-nav-item">
-              <a href="./index.html" class="header-nav-link"> Home </a>
+              <a href="#home" class="header-nav-link"> Home </a>
             </li>
             <li class="header-nav-item">
-              <a href="./index.html#how-made" class="header-nav-link">
+              <a href="index.html#how-made" class="header-nav-link">
                 How it’s made?
               </a>
             </li>
@@ -66,7 +66,7 @@
           </svg>
         </div>
       </div>
-      <div class="header-mob-menu" data-mobileMenu>
+      <div class="header-mob-menu " data-mobileMenu>
         <div class="header-mob-menu-container">
           <div class="header-mob-close-btn" data-mobileMenu-close>
             <svg class="header-mob-close-icon" width="14" height="14">
@@ -92,14 +92,14 @@
             <address class="header-mob-contacts">
               <ul class="header-mob-contacts-list">
                 <li class="header-mob-contact-item">
-                  <a href="" class="header-mob-contact-link">
+                  <a href="#" class="header-mob-contact-link" target="_blank">
                     <svg class="header-mob-contact-icon" width="22" height="22">
                       <use href="./images/icons-sprite.svg#instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="header-mob-contact-item">
-                  <a href="" class="header-mob-contact-link">
+                  <a href="#" class="header-mob-contact-link" target="_blank">
                     <svg class="header-mob-contact-icon" width="22" height="22">
                       <use href="./images/icons-sprite.svg#twitter"></use>
                     </svg>
@@ -129,7 +129,7 @@
           </div>
         </div>
       </section>
-      <section class="stand-out">
+      <section class="stand-out" id="stand-out">
         <div class="stand-out-container container">
           <h2 class="stand-out-title-hidden">Features</h2>
           <ul class="stand-out-list">
@@ -179,7 +179,7 @@
           </ul>
         </div>
       </section>
-      <section class="ingredients">
+      <section class="ingredients" id="our-products">
         <div class="ingredients-container container">
           <h2 class="ingredients-title">
             IT ALL ADDS UP TO ONE EXCEPTIONAL
@@ -634,19 +634,19 @@
           <nav class="footer-bottom-nav">
             <ul class="footer-bottom-nav-list">
               <li class="footer-bottom-nav-item">
-                <a href="" class="footer-bottom-nav-link">Home</a>
+                <a href="#home" class="footer-bottom-nav-link">Home</a>
               </li>
               <li class="footer-bottom-nav-item footer-mob-link">
-                <a href="" class="footer-bottom-nav-link">Our products</a>
+                <a href="#our-products" class="footer-bottom-nav-link">Our products</a>
               </li>
               <li class="footer-bottom-nav-item">
-                <a href="" class="footer-bottom-nav-link">How it’s made?</a>
+                <a href="#how-made" class="footer-bottom-nav-link">How it’s made?</a>
               </li>
               <li class="footer-bottom-nav-item footer-mob-link">
-                <a href="" class="footer-bottom-nav-link">Top sellers</a>
+                <a href="#stand-out" class="footer-bottom-nav-link">Top sellers</a>
               </li>
               <li class="footer-bottom-nav-item">
-                <a href="" class="footer-bottom-nav-link">Chocolate is loved</a>
+                <a href="#chocolate-is" class="footer-bottom-nav-link">Chocolate is loved</a>
               </li>
             </ul>
           </nav>
