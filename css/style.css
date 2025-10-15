@@ -1365,6 +1365,9 @@ main {
       width: 24px;
       height: 24px;
     }
+    .form-text-invalid {
+      font-size: 12px;
+    }
   }
 
   .review-form-comment {
