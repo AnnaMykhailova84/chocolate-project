@@ -42,6 +42,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .black {
   color: #111111;
@@ -181,8 +184,8 @@ main {
   display: none;
 }
 
-.header-contact-item {
-}
+/* .header-contact-item {
+} */
 .header-contact-link > .contact-insta,
 .header-contact-link > .contact-twitt {
   fill: transparent;
@@ -287,8 +290,8 @@ main {
   gap: 32px;
   flex-grow: 1;
 }
-.header-mob-menu-item {
-}
+/* .header-mob-menu-item {
+} */
 .header-mob-menu-link {
   color: #fff;
   transition: color 0.2s ease;
@@ -300,17 +303,17 @@ main {
   color: #fd9222;
 }
 
-.header-mob-contacts {
-}
+/* .header-mob-contacts {
+} */
 .header-mob-contacts-list {
   display: flex;
   align-items: center;
   gap: 18px;
 }
-.header-mob-contact-item {
-}
-.header-mob-contact-link {
-}
+/* .header-mob-contact-item {
+} */
+/* .header-mob-contact-link {
+} */
 
 .header-mob-contact-icon {
   fill: transparent;
@@ -762,12 +765,12 @@ main {
 }
 
 
-.testimonials-card-img {
+/* .testimonials-card-img { */
   /* width: 100%; */
   /* height: auto; */
   /* margin: 50% auto; */
   /* transform: translateY(-50%); */
-}
+/* } */
 
 .testimonials-card-name {
   font-weight: 600;
@@ -876,7 +879,7 @@ main {
 
 .review-form-input {
   position: relative;
-  input {
+  .form-input {
     border: 1.50px solid rgba(17, 17, 17, 0.05);
     border-radius: 8px;
     padding: 13px 13px 13px 43px;
@@ -885,6 +888,9 @@ main {
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
     background-color: transparent;
     transition: border .2s ease;
+    &::placeholder {
+      color: transparent;
+    }
   }
   .review-form-icon {
     position: absolute;
@@ -901,7 +907,28 @@ main {
   &:hover .review-form-icon {
     stroke: #fd9222;
   }
+  .form-text-invalid {
+    position: absolute;
+    content: "";
+    bottom: -14px;
+    left: 0;
+    font-size: 10px;
+    color: #d64040;
+    display: block;
+    display: none;
+  }
 }
+
+.form-input:not(:placeholder-shown):invalid~.form-text-invalid {
+  display: block;
+  color: #d64040;
+}
+
+
+.form-input:not(:placeholder-shown):invalid {
+  border-color: #d64040;
+}
+
 .review-form-comment {
   border: 1.50px solid rgba(17, 17, 17, 0.05);
   border-radius: 8px;
@@ -922,10 +949,18 @@ main {
 .review-form-policy {
   position: relative;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  gap: 12px;
   margin: 4px 0 32px;
+  padding-left: 32px;
+}
+.visually-hidden,
+.review-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 20px;
+  height: 20px;
+  /* flex-shrink: 0; */
 }
 
 .review-policy-label {
@@ -941,35 +976,42 @@ main {
     left: 0;
     width: 20px;
     height: 20px;
-    border: 1px solid rgb(0, 255, 136);
+    border: 1px solid rgba(17, 17, 17, 0.14);
     border-radius: 6px;
-    /* border: 1px solid rgba(17, 17, 17, 0.14); */
-    background-color: #fd9222;
+    background-color: rgba(253, 146, 34, 0);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     svg {
-      fill: red ;
-      stroke: blue;
       margin: auto;
+      fill: transparent;
+      transform: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
   a {
     text-decoration: underline;
   }  
 }
-
+.review-checkbox:checked + .review-policy-label>.review-checkbox-custom {
+  border: none;
+  background-color: rgba(253, 146, 34, 1);
+  svg {
+    fill: #fff;
+  }
+}
 
 .review-form-btn {
   padding: 12px 28px;
+  opacity: .7;
+  pointer-events: none;
+}
+.review-form:has(input[required]:valid:not(:placeholder-shown)):not(:has(input[required]:invalid)) .review-form-btn:is(:hover, :focus, :active) {
+  pointer-events: auto;
 }
 
-.visually-hidden,
-.review-checkbox  {
-  /* visibility: hidden; */
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
+.review-form:has(input:valid[required]:not(:placeholder-shown)):not(:has(input[required]:invalid)) .review-form-btn {
+  opacity: 1;
+  pointer-events: auto;
 }
-
-
 
 .footer {
   background-color: #1e1823;
@@ -1029,15 +1071,15 @@ main {
   gap: 4px;
 }
 
-.footer-top-contact-item {
-}
+/* .footer-top-contact-item {
+} */
 .footer-top-contact-link {
   color: #fff;
   transition: color 0.2s ease;
 }
 
-.footer-bottom {
-}
+/* .footer-bottom {
+} */
 .footer-bottom-nav {
   font-family: inherit;
   font-weight: 500;
@@ -1051,8 +1093,8 @@ main {
   flex-direction: column;
   gap: 18px;
 }
-.footer-bottom-nav-item {
-}
+/* .footer-bottom-nav-item {
+} */
 .footer-mob-link {
   display: block;
   @media screen and (min-width: 768px) {

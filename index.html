@@ -45,14 +45,14 @@
         <address class="header-contacts">
           <ul class="header-contacts-list">
             <li class="header-contact-item">
-              <a href="" class="header-contact-link">
+              <a href="#" class="header-contact-link" target="_blank">
                 <svg class="contact-insta" width="24" height="24">
                   <use href="./images/icons-sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="header-contact-item">
-              <a href="" class="header-contact-link">
+              <a href="#" class="header-contact-link" target="_blank">
                 <svg class="contact-twitt" width="24" height="24">
                   <use href="./images/icons-sprite.svg#twitter"></use>
                 </svg>
@@ -498,7 +498,7 @@
             </button>
           </div>
         </div>
-        <div class="modal-review" data-reviewBox>
+        <div class="modal-review review-open" data-reviewBox>
           <div class="review-container">
             <div class="review-close-btn" data-reviewBtn-close>
               <svg class="review-close-icon" width="16" height="16">
@@ -512,10 +512,20 @@
               <div class="review-form-box">
                 <label for="user-name" class="review-form-label">Name</label>
                 <div class="review-form-input">
-                  <input type="text" class="review-form-input" id="user-name" />
+                  <input 
+                    type="text" 
+                    class="form-input" 
+                    id="user-name" 
+                    minlength="2"
+                    maxlength="30"
+                    placeholder="name"
+                    required 
+                  />
                   <svg class="review-form-icon">
                     <use href="./images/icons-sprite.svg#user-icon"></use>
                   </svg>
+                  <!-- <p class="form-text-valid">Success!</p> -->
+                  <p class="form-text-invalid">Invalid text</p>
                 </div>
               </div>
               <div class="review-form-box">
@@ -523,29 +533,42 @@
                 <div class="review-form-input">
                   <input
                     type="email"
-                    class="review-form-input"
+                    class="form-input"
                     id="user-email"
+                    pattern="(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)"
+                    pattern=".+@example\.com" 
+                    size="50"
+                    placeholder="email"
+                    required 
                   />
-                  <svg class="review-form-icon" >
+                  <svg class="review-form-icon">
                     <use href="./images/icons-sprite.svg#mail-icon"></use>
                   </svg>
+                  <!-- <p class="form-text-valid">Success!</p> -->
+                  <p class="form-text-invalid">Invalid text</p>
                 </div>
               </div>
               <div class="review-form-box">
-                <label for="user-tel" class="review-form-label"
-                  >Phone number</label
-                >
+                <label for="user-tel" class="review-form-label">Phone number</label>
                 <div class="review-form-input">
-                  <input type="tel" class="review-form-input" id="user-tel" />
+                  <input 
+                    type="tel" 
+                    class="form-input" 
+                    id="user-tel" 
+                    pattern="[0-9]{5-20}"
+                    minlength="5"
+                    maxlength="25"
+                    placeholder="number"
+                  />
                   <svg class="review-form-icon">
                     <use href="./images/icons-sprite.svg#phone-icon"></use>
                   </svg>
+                  <!-- <p class="form-text-valid">Success!</p> -->
+                  <p class="form-text-invalid">Invalid text</p>
                 </div>
               </div>
               <div class="review-form-box">
-                <label for="user-comment" class="review-form-label"
-                  >Comment</label
-                >
+                <label for="user-comment" class="review-form-label">Comment</label>
                 <textarea
                   type="textarea"
                   name="user-comment"
@@ -566,12 +589,12 @@
                 />
                 <label for="user-policy" class="review-policy-label">
                   <span class="review-checkbox-custom">
-                    <svg class="" width="10" height="10">
+                    <svg class="review-checkbox-icon" width="10" height="10">
                       <use href="./images/icons-sprite.svg#checked-icon"></use>
                     </svg>
                   </span>
                   I accept the terms and conditions of the
-                  <a href="#" class="orange">Privacy Policy</a>
+                  <a href="#" class="orange" target="_blank">Privacy Policy</a>
                 </label>
               </div>
               <button type="submit" class="review-form-btn btn-orange">
