@@ -924,7 +924,6 @@ main {
   color: #d64040;
 }
 
-
 .form-input:not(:placeholder-shown):invalid {
   border-color: #d64040;
 }
