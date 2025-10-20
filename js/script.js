@@ -1,4 +1,6 @@
-(() => {
+'use strict';
+
+  (() => {
   const refs = {
     // Додати атрибут data-modal-open на кнопку відкриття
     openModalBtn: document.querySelector('[data-modal-open]'),
