@@ -46,6 +46,17 @@
     refs.leaveReview.classList.toggle('review-open');
   }
   
+  document.querySelectorAll('.testimonials-check').forEach(input => {
+  input.addEventListener('change', () => {
+    document.querySelectorAll('.testimonials-item').forEach(card => 
+      card.classList.remove('checked')
+    );
+    const activeCard = document.querySelector(`.testimonials-card[for="${input.id}"]`).parentElement;
+    if (activeCard) activeCard.classList.add('checked');
+    console.log(activeCard);
+  });
+});
+  
 })();
 // console.log('hi');
-// console.log(document.querySelector('.review-form'));
+// console.log(document.querySelector('.testimonials-check').checked);

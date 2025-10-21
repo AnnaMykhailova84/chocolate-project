@@ -735,17 +735,24 @@ main {
 .testimonials-box {
   margin: 32px auto;
 }
+
 .testimonials-list{
+  position: relative;
   font-family: inherit;
   text-align: center;
   padding-top: 42px;
 }
 
-.testimonials-card {
-  position: relative;
+.testimonials-item {
+  display: none;
   max-width: 100%;
   width: auto;
-  height: 200px;
+  height: 200px;  
+}
+.testimonials-card {
+  display: block;
+  position: relative;
+  height: 100%;
   padding: 56px 18px 18px;
   border-radius: 15px;
   background-color: #fff;
@@ -753,7 +760,6 @@ main {
   box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
 }
 
-/* .testimonials-card-img-box, */
 .testimonials-card-img  {
   position: absolute;
   width: 80px;
@@ -765,14 +771,6 @@ main {
   box-shadow: 0 0 15px 3px rgba(17, 17, 17, 0.3);
   overflow: hidden;
 }
-
-
-/* .testimonials-card-img { */
-  /* width: 100%; */
-  /* height: auto; */
-  /* margin: 50% auto; */
-  /* transform: translateY(-50%); */
-/* } */
 
 .testimonials-card-name {
   font-weight: 600;
@@ -788,6 +786,51 @@ main {
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: rgba(17, 17, 17, 0.7);
+}
+.testimonials-check-list {
+  margin-top: 20px;
+  display: flex;
+  gap: 13px;
+  justify-content: center;
+}
+
+.testimonials-check-item {
+  position: relative;
+}
+
+.testimonials-span {
+  display: block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 20px;
+  background-color: rgba(17, 17, 17, 0.1);
+  bottom: 0;
+  left: 100px;
+  transition: width .2s ease;
+}
+.testimonials-span.checked {
+  width: 28px;  
+  background-color: rgba(253, 146, 34, .5);
+  left: 30px;
+}
+
+.testimonials-check {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+}
+
+.testimonials-check:checked {
+  width: 28px;
+  + .testimonials-span {
+  width: 28px;
+  background-color: rgba(253, 146, 34, .5);
+  }
+}
+
+.testimonials-item.checked {
+  display: block;
 }
 
 .testimonials-btn {
@@ -1323,9 +1366,11 @@ main {
     flex-wrap: wrap;
   }
   
+  .testimonials-item {
+    flex-basis: calc((100% - 16px) / 2);    
+  }
   .testimonials-card {
     padding: 56px 16px 16px;
-    flex-basis: calc((100% - 16px) / 2);    
   }
   
   .review-container {
@@ -1583,9 +1628,11 @@ main {
     gap: 28px;
   }
 
+  .testimonials-item {
+    flex-basis: calc((100% - 56px) / 3);
+  }
   .testimonials-card {
     padding: 56px 16px 16px;
-    flex-basis: calc((100% - 56px) / 3);
   }
   
   .footer-bottom-nav-list {
