@@ -1,3 +1,3 @@
 # chocolate-project
 
-Study project
+PET project
